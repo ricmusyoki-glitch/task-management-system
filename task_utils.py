@@ -16,7 +16,7 @@ def view_pending_tasks(tasks):
         print("No pending tasks.")
         return
     
-    for task in pending:
+    for task in pending: 
         print(f"Title: {task['title']}")
         print(f"Description: {task['description']}")
         print(f"Due Date: {task['due_date']}")
@@ -24,6 +24,6 @@ def view_pending_tasks(tasks):
 
 def calculate_progress(tasks):
     if len(tasks) == 0:
-        return 0
+        return 0.0
     completed = sum(1 for task in tasks if task['completed'])
-    return int((completed / len(tasks)) * 100)
+    return (completed / len(tasks)) * 100
